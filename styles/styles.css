@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.slate {
+  color: #94a3b8;
+}
+
+.white {
+  color: #E2E8F0;
+}
+
+.dark {
+  color: #030712;
+}
+
+/**
+  --fs-xl: 128px;
+  --fs-lg: 64px;
+  --fs-md: 32px;
+  --fs-base: 16px;
+  --fs-sm: 8px;
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  max-width: 90%;
+  min-height: 100vh;
+  color: #94a3b8;
+  background-color: #030712;
+  padding: 8px 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 456px) {
+  body {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 556px) {
+  body {
+    max-width: 100%;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu > nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar__mobile--menu > nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 0 20px;
+}
+.navbar__logo img {
+  width: 32px;
+  height: 32px;
+}
+@media screen and (max-width: 456px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 556px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+.navbar__menu > nav > ul li {
+  font-size: 24px;
+  font-weight: 600;
+  list-style: none;
+  margin-left: 24px;
+}
+.navbar__menu > nav > ul a {
+  text-decoration: none;
+}
+.navbar__misc--theme {
+  width: 32px;
+  height: 32px;
+}
+.navbar__misc--upload {
+  width: 32px;
+  height: 32px;
+}
+@media screen and (max-width: 456px) {
+  .navbar__misc {
+    display: none;
+  }
+}
+@media screen and (max-width: 556px) {
+  .navbar__misc {
+    display: none;
+  }
+}
+@media screen and (min-width: 557px) {
+  .navbar__hamburger {
+    display: none;
+  }
+}
+.navbar__hamburger--img {
+  width: 32px;
+  height: 32px;
+}
+
+.navbar__mobile {
+  float: right;
+  min-height: 100vh;
+  display: none;
+}
+.navbar__mobile--menu > nav > ul li {
+  font-size: 64px;
+  font-weight: 600;
+  list-style: none;
+  margin-top: 24px;
+  margin-right: 24px;
+}
+.navbar__mobile--menu > nav > ul a {
+  text-decoration: none;
+}
+.navbar__mobile--misc {
+  margin-top: 24px;
+}
+.navbar__mobile--theme {
+  width: 64px;
+  height: 64px;
+}
+.navbar__mobile--upload {
+  width: 64px;
+  height: 64px;
+}
+@media screen and (min-width: 557px) {
+  .navbar__mobile {
+    display: none !important;
+  }
+}/*# sourceMappingURL=styles.css.map */
