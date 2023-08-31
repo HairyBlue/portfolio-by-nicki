@@ -3,7 +3,7 @@ const theme = document.querySelectorAll(".theme-light-dark");
 const upload = document.querySelectorAll(".upload");
 const secondary = document.querySelectorAll(".secondary");
 const localTheme = localStorage.getItem("_theme");
-
+let isClosed = false;
 localDataTheme(localTheme);
 
 theme.forEach((els) => {
@@ -26,12 +26,14 @@ theme.forEach((els) => {
 
 const menuIcon = document.querySelector(".navbar__hamburger--img");
 menuIcon.addEventListener("click", () => {
-  if (menuIcon.src !== svgURL("close")) {
-    menuIcon.src = svgURL("close");
+  if (!isClosed) {
+    menuIcon.src = svg("close");
     document.querySelector(".navbar__mobile").style.display = "block";
+    isClosed = !isClosed;
   } else {
-    menuIcon.src = svgURL("hambuger-menu");
+    menuIcon.src = svg("hamburger-menu");
     document.querySelector(".navbar__mobile").style.display = "none";
+    isClosed = !isClosed;
   }
 });
 
@@ -47,10 +49,10 @@ function localDataTheme(localTheme) {
 function light() {
   bodyTheme[0].style.backgroundColor = "#fff";
   theme.forEach((e) => {
-    e.src = svgURL("theme-light");
+    e.src = svg("theme-light");
   });
   upload.forEach((e) => {
-    e.src = svgURL("upload-light");
+    e.src = svg("upload-light");
   });
   secondary.forEach((e) => {
     e.classList.remove("slate");
@@ -61,10 +63,10 @@ function light() {
 function dark() {
   bodyTheme[0].style.backgroundColor = "";
   theme.forEach((e) => {
-    e.src = svgURL("theme-dark");
+    e.src = svg("theme-dark");
   });
   upload.forEach((e) => {
-    e.src = svgURL("upload-dark");
+    e.src = svg("upload-dark");
   });
   secondary.forEach((e) => {
     e.classList.remove("dark");
@@ -72,12 +74,14 @@ function dark() {
   });
 }
 
-function svgURL(svgName) {
-  const basePath =
-    window.location.protocol +
-    "//" +
-    window.location.hostname +
-    (window.location.port ? ":" + window.location.port : "");
-
-  return `${basePath}/portfolio-by-nicki/assets/svg/${svgName}.svg`;
+function svg(svgName) {
+  return `assets/svg/${svgName}.svg`;
 }
+// function svg(svgName) {
+//   const basePath =
+//     window.location.protocol +
+//     "//" +
+//     window.location.hostname +
+//     (window.location.port ? ":" + window.location.port : "");
+//   return `${basePath}/portfolio-by-nicki/assets/svg/${svgName}.svg`;
+// }

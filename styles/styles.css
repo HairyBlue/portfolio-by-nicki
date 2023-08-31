@@ -27,7 +27,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  max-width: 90%;
+  width: 80%;
   min-height: 100vh;
   color: #94a3b8;
   background-color: #030712;
@@ -36,12 +36,49 @@ body {
 }
 @media screen and (max-width: 456px) {
   body {
-    max-width: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 556px) {
   body {
-    max-width: 100%;
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.tooltip {
+  position: relative;
+}
+.tooltip :after {
+  display: none;
+}
+.tooltip[aria-label]:hover:after {
+  content: attr(aria-label);
+  position: absolute;
+  display: block;
+  top: 110%;
+  left: -15px;
+  font-weight: 500;
+  color: #E2E8F0;
+  background-color: #64748B;
+  white-space: nowrap;
+  text-decoration: none;
+  text-indent: 0;
+  overflow: visible;
+  padding: 8px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 456px) {
+  .tooltip[aria-label]:hover:after {
+    left: 0;
+  }
+}
+@media screen and (max-width: 556px) {
+  .tooltip[aria-label]:hover:after {
+    left: 0;
   }
 }
 

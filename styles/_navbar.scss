@@ -111,7 +111,7 @@
     height: 64px;
   }
 
- @include tablet{
-  display: none !important;
- }
+  @include tablet {
+    display: none !important;
+  }
 }

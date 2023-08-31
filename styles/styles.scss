@@ -12,7 +12,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: $fs-base;
-  max-width: 90%;
+  width: 80%;
   min-height: 100vh;
   color: $slate;
   background-color: $dark;
@@ -20,12 +20,45 @@ body {
   margin: 0 auto;
 
   @include mobile {
-    max-width: 100%;
+    width: 100%;
   }
   @include mobile-large {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
+a {
+  text-decoration: none;
+}
+
+.tooltip {
+  position: relative;
+  :after {
+    display: none;
+  }
+  &[aria-label]:hover:after {
+    content: attr(aria-label);
+    position: absolute;
+    display: block;
+    top: 110%;
+    left: -15px;
+    font-weight: 500;
+    color: $white;
+    background-color: $bg-button;
+    white-space: nowrap;
+    text-decoration: none;
+    text-indent: 0;
+    overflow: visible;
+    padding: 8px;
+    border-radius: 5px;
+
+    @include mobile {
+      left: 0;
+    }
+    @include mobile-large {
+      left: 0;
+    }
+  }
+}
 
 @import "navbar";

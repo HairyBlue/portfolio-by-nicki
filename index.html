@@ -11,7 +11,9 @@
     <header>
       <div class="navbar">
         <div class="navbar__logo">
-          <img id="logo" src="assets/svg/logo.svg" alt="" />
+          <a href="#">
+            <img id="logo" src="assets/svg/logo.svg" alt="" />
+          </a>
         </div>
         <div class="navbar__menu">
           <nav>
@@ -23,21 +25,39 @@
           </nav>
         </div>
         <div class="navbar__misc">
-          <img
-            class="navbar__misc--theme theme-light-dark"
-            src="assets/svg/theme-dark.svg"
-            alt=""
-          />
-          <img
-            class="navbar__misc--upload upload"
-            src="assets/svg/upload-dark.svg"
-            alt=""
-          />
+          <a
+            href="#"
+            aria-label="Theme"
+            class="tooltip"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <img
+              class="navbar__misc--theme theme-light-dark tooltip"
+              src="assets/svg/theme-dark.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="#"
+            aria-label="Resume"
+            class="tooltip"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <img
+              class="navbar__misc--upload upload"
+              src="assets/svg/upload-dark.svg"
+              alt=""
+            />
+          </a>
         </div>
 
         <div class="navbar__hamburger">
           <img
-            src="assets/svg/hambuger-menu.svg"
+            src="assets/svg/hamburger-menu.svg"
             alt=""
             class="navbar__hamburger--img"
           />
@@ -55,16 +75,34 @@
           </nav>
         </div>
         <div class="navbar__mobile--misc">
-          <img
-            class="navbar__mobile--theme theme-light-dark"
-            src="assets/svg/theme-dark.svg"
-            alt=""
-          />
-          <img
-            class="navbar__mobile--upload upload"
-            src="assets/svg/upload-dark.svg"
-            alt=""
-          />
+          <a
+            href="#"
+            aria-label="Theme"
+            class="tooltip"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <img
+              class="navbar__mobile--theme theme-light-dark"
+              src="assets/svg/theme-dark.svg"
+              alt=""
+          /></a>
+          <a
+            href="#"
+            aria-label="Resume"
+            class="tooltip"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <img
+              class="navbar__mobile--upload upload"
+              src="assets/svg/upload-dark.svg"
+              aria-label="Resume"
+              alt=""
+            />
+          </a>
         </div>
       </div>
     </header>
