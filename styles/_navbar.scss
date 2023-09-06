@@ -15,6 +15,7 @@
 }
 
 .navbar {
+  position: relative;
   @extend %flex-between;
 
   &__logo {
@@ -68,7 +69,15 @@
     @include tablet {
       display: none;
     }
-
+    @include small-screen {
+      display: none;
+    }
+    @include large-screen {
+      display: none;
+    }
+    @include extra-large-screen {
+      display: none;
+    }
     &--img {
       width: 32px;
       height: 32px;
@@ -77,8 +86,10 @@
 }
 
 .navbar__mobile {
+  position: absolute;
   width: 100%;
   min-height: 100vh;
+  z-index: 999;
   display: none;
 
   &--menu > nav > ul {
@@ -98,7 +109,7 @@
   &--misc {
     margin-top: 24px;
     margin-right: 24px;
-    text-align: end
+    text-align: end;
   }
   &--theme {
     width: 64px;
@@ -108,8 +119,16 @@
     width: 64px;
     height: 64px;
   }
-
   @include tablet {
+    display: none !important;
+  }
+  @include small-screen {
+    display: none !important;
+  }
+  @include large-screen {
+    display: none !important;
+  }
+  @include extra-large-screen {
     display: none !important;
   }
 }

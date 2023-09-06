@@ -7,10 +7,12 @@ menuIcon.addEventListener("click", () => {
   if (!isClosed) {
     menuIcon.src = svg("close");
     document.querySelector(".navbar__mobile").style.display = "block";
+    document.querySelector(".main").style.display = "none"
     isClosed = !isClosed;
   } else {
     menuIcon.src = svg("hamburger-menu");
     document.querySelector(".navbar__mobile").style.display = "none";
+    document.querySelector(".main").style.display = ""
     isClosed = !isClosed;
   }
 });

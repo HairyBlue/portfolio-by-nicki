@@ -3,6 +3,7 @@ const theme = document.querySelectorAll(".theme-light-dark");
 const upload = document.querySelectorAll(".upload");
 const primary = document.querySelectorAll(".white");
 const secondary = document.querySelectorAll(".slate");
+const backgroundWhite = document.querySelector(".bg-white");
 const localStorageTheme = localStorage.getItem("_theme");
 
 const github = document.querySelector("#github");
