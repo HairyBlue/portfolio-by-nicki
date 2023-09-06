@@ -7,9 +7,34 @@
 */
 @import "media-query";
 
-$fs-xl2: 128px;
-$fs-xl: 64px;
-$fs-lg: 32px;
-$fs-md: 24px;
-$fs-base: 16px;
-$fs-sm: 8px;
+:root {
+  --fs-xl2: 128px;
+  --fs-xl: 64px;
+  --fs-lg: 32px;
+  --fs-md: 24px;
+  --fs-base: 16px;
+  --fs-sm: 8px;
+}
+
+@include mobile {
+  :root {
+    --fs-xl2: 48px;
+    --fs-xl: 32px;
+    --fs-lg: 24px
+  }
+}
+@include mobile-large {
+  :root {
+    --fs-xl2: 64px;
+    --fs-xl: 32px;
+    --fs-lg: 24px
+  }
+}
+
+
+$fs-xl2: var(--fs-xl2);
+$fs-xl: var(--fs-xl);
+$fs-lg: var(--fs-lg);
+$fs-md: var(--fs-md);
+$fs-base: var(--fs-base);
+$fs-sm: var(--fs-sm);

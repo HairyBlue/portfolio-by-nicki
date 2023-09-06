@@ -1,20 +1,32 @@
 $dark: #030712;
-$white: #E2E8F0;
+$white: #e2e8f0;
 $slate: #94a3b8;
-$bg-button: #64748B;
+$bg-button: #64748b;
 $color-button: #030712;
-$bg-icon: #64748B;
-$bg-grid: #1F2937; 
+$bg-icon: #64748b;
+$bg-grid: #1f2937;
 
-
-.slate{
-    color: $slate;
+.slate,
+.github-dark,
+.linkedin-dark,
+.gmail-dark {
+  color: $slate;
 }
 
-.white{
-    color: $white;
+.white {
+  color: $white;
 }
 
-.dark{
-    color: $dark;
+.dark {
+  color: $dark;
+}
+
+.github-light {
+  color: $dark;
+}
+.linkedin-light {
+  color: #0077b5;
+}
+.gmail-light {
+  color: #ef4444;
 }

@@ -8,19 +8,14 @@
   justify-content: space-evenly;
   align-items: center;
 }
-%flex-column {
+%flex-column-end {
   display: flex;
   flex-direction: column;
-}
-%flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .navbar {
   @extend %flex-between;
-  padding: 0 20px;
 
   &__logo {
     img {
@@ -82,13 +77,14 @@
 }
 
 .navbar__mobile {
-  float: right;
+  width: 100%;
   min-height: 100vh;
   display: none;
+
   &--menu > nav > ul {
-    @extend %flex-column;
+    @extend %flex-column-end;
     li {
-      font-size: $fs-xl;
+      font-size: 64px;
       font-weight: 600;
       list-style: none;
       margin-top: 24px;
@@ -101,6 +97,8 @@
 
   &--misc {
     margin-top: 24px;
+    margin-right: 24px;
+    text-align: end
   }
   &--theme {
     width: 64px;

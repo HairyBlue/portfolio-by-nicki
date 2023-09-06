@@ -1,0 +1,70 @@
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+%flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main {
+  font-size: $fs-lg;
+  font-weight: 600;
+  height: 100vh;
+  margin-top: 120px;
+
+  @include mobile {
+    margin-top: 64px;
+    text-align: center;
+  }
+  @include mobile-large {
+    margin-top: 64px;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: $fs-xl2;
+    font-weight: 900;
+    margin-left: -8px;
+  }
+
+  &__links {
+    @extend %flex-between;
+    margin-top: 128px;
+
+    @include mobile {
+      display: block;
+    }
+    @include mobile-large {
+        display: block;
+      }
+  }
+
+  &__button {
+    background-color: $slate;
+    padding: 12px;
+    border-radius: 10px;
+    @include mobile {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include mobile-large {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon {
+    font-size: $fs-xl;
+    @include mobile {
+      font-size: 128px;
+      margin-top: 32px;
+    }
+    @include mobile-large {
+      font-size: 128px;
+      margin-top: 32px;
+    }
+  }
+}

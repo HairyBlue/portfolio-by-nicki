@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
     <title>nickimartypecision | portfolio</title>
   </head>
   <body>
@@ -18,9 +20,9 @@
         <div class="navbar__menu">
           <nav>
             <ul>
-              <li><a href="#home" class="secondary slate">Home</a></li>
-              <li><a href="#project" class="secondary slate">Project</a></li>
-              <li><a href="#about" class="secondary slate">About</a></li>
+              <li><a href="#home" class="slate">Home</a></li>
+              <li><a href="#project" class="slate">Project</a></li>
+              <li><a href="#about" class="slate">About</a></li>
             </ul>
           </nav>
         </div>
@@ -68,9 +70,9 @@
         <div class="navbar__mobile--menu">
           <nav>
             <ul>
-              <li><a href="#home" class="secondary slate">Home</a></li>
-              <li><a href="#project" class="secondary slate">Project</a></li>
-              <li><a href="#about" class="secondary slate">About</a></li>
+              <li><a href="#home" class="slate">Home</a></li>
+              <li><a href="#project" class="slate">Project</a></li>
+              <li><a href="#about" class="slate">About</a></li>
             </ul>
           </nav>
         </div>
@@ -107,8 +109,28 @@
       </div>
     </header>
 
-    <main></main>
+    <main class="main">
+      <div class="main__intro">
+        <div>Hi, my name is</div>
+        <div><span class="main__name white">Nicki Marty Pecision</span></div>
+        <div>An aspiring web developer crafting effective web solutions.</div>
+      </div>
+      <div class="main__links">
+        <div class="main__button dark">Check my projects</div>
+        <div class="main__icon">
+          <a href="" id="github" class="github-dark"
+            ><iconify-icon icon="mdi:github"
+          /></a>
+          <a href="" id="linkedin" class="linkedin-dark">
+            <iconify-icon icon="mdi:linkedin"
+          /></a>
+          <a href="" id="gmail" class="gmail-dark"
+            ><iconify-icon icon="mdi:gmail"
+          /></a>
+        </div>
+      </div>
+    </main>
     <footer></footer>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
