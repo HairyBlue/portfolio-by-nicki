@@ -1,5 +1,5 @@
 import "./theme.js";
-
+import "./projectData.js"
 const menuIcon = document.querySelector(".navbar__hamburger--img");
 let isClosed = false;
 
