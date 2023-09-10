@@ -1,6 +1,6 @@
 let latestKnownPosition = 0;
 const home = 0;
-const project = 750;
+const project = window.screen.height - 100;
 export function Home() {
   document.querySelectorAll(".home-button").forEach((element) => {
     element.addEventListener("click", () => {
@@ -19,7 +19,7 @@ export function Project() {
       document.querySelector(".navbar__mobile").style.display = "";
       document.querySelector(".navbar").style.display = "";
       document.querySelector(".main").style.display = "";
-      latestKnownPosition = project;
+      latestKnownPosition = project ;
       window.scrollTo({ top: project, behavior: "smooth" });
     });
   });
