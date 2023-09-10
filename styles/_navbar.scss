@@ -14,7 +14,7 @@
   align-items: end;
 }
 
-header {
+.header {
   position: relative;
 }
 .blur {
@@ -65,7 +65,7 @@ header {
     }
   }
 
-  &__menu > nav > ul {
+  &__menu > &__nav > ul {
     @extend %flex-evenly;
     li {
       font-size: $fs-md;

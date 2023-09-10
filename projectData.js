@@ -182,6 +182,7 @@ function gridList(data) {
     /********** Label **********/
 
     image.setAttribute("src", data[j].image);
+    image.setAttribute("alt", data[j].name);
     projectLabelBig.textContent = data[j].name;
     const description = document.createElement("div");
     description.textContent = data[j].description;

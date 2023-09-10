@@ -2,46 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Primary Meta Tags -->
+    <meta
+      name="description"
+      content="A simple portfolio of Nicki Marty Pecision."
+    />
+    <meta name="keywords" content="Nicki, Pecision" />
+    <meta name="author" content=" Nicki Marty Pecision" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" />
+    <meta property="og:title" content="nickimartypecision | portfolio" />
+    <meta
+      property="og:description"
+      content="A simple portfolio of Nicki Marty Pecision."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" />
+    <meta property="twitter:title" content="nickimartypecision | portfolio" />
+    <meta
+      property="twitter:description"
+      content="A simple portfolio of Nicki Marty Pecision."
+    />
+
+    <!-- ICO -->
     <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+    <!-- Style -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+    <!-- Icon-Script -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
     <title>nickimartypecision | portfolio</title>
   </head>
   <body>
-    <header>
+    <div class="header">
       <div class="navbar">
         <div class="navbar__center">
           <div class="navbar__logo">
-            <a href="#">
-              <img id="logo" src="assets/svg/logo.svg" alt="" />
+            <a href="#" aria-label="Logo" rel="noopener noreferrer">
+              <img id="logo" src="assets/svg/logo.svg" alt="logo" />
             </a>
           </div>
           <div class="navbar__menu">
-            <nav>
+            <div class="navbar__nav">
               <ul>
                 <li class="slate home-button">Home</li>
                 <li class="slate project-button">Project</li>
                 <li class="slate about-button">About</li>
               </ul>
-            </nav>
+            </div>
           </div>
           <div class="navbar__misc">
-            <!-- <a
-              href="#"
-              aria-label="Theme"
-              class="tooltip"
-              aria-expanded="false"
-              role="button"
-              tabindex="0"
-            > -->
             <img
               class="navbar__misc--theme theme-light-dark tooltip"
               src="assets/svg/theme-dark.svg"
-              alt=""
+              alt="theme"
             />
-            <!-- </a> -->
             <a
               href="#"
               aria-label="Resume"
@@ -49,17 +74,18 @@
               aria-expanded="false"
               role="button"
               tabindex="0"
+              rel="noopener noreferrer"
             >
               <img
                 class="navbar__misc--upload upload"
                 src="assets/svg/upload-dark.svg"
-                alt=""
+                alt="CV"
               />
             </a>
           </div>
 
           <div class="navbar__hamburger--menu">
-            <img src="assets/svg/hamburger-menu.svg" alt="" />
+            <img src="assets/svg/hamburger-menu.svg" alt="hamburger-icon" />
           </div>
         </div>
         <div class="blur"></div>
@@ -76,20 +102,11 @@
           </nav>
         </div>
         <div class="navbar__mobile--misc">
-          <!-- <a
-            href="#"
-            aria-label="Theme"
-            class="tooltip"
-            aria-expanded="false"
-            role="button"
-            tabindex="0"
-          > -->
           <img
             class="navbar__mobile--theme theme-light-dark"
             src="assets/svg/theme-dark.svg"
-            alt=""
+            alt="mobile-theme"
           />
-          <!-- </a> -->
           <a
             href="#"
             aria-label="Resume"
@@ -97,22 +114,20 @@
             aria-expanded="false"
             role="button"
             tabindex="0"
+            rel="noopener noreferrer"
           >
             <img
               class="navbar__mobile--upload upload"
               src="assets/svg/upload-dark.svg"
               aria-label="Resume"
-              alt=""
+              alt="close-icon"
             />
           </a>
         </div>
-        <div class="navbar__mobile--back white">
-          <!-- <img src="assets/svg/close.svg" alt="" /> -->
-          Go Back
-        </div>
+        <div class="navbar__mobile--back white">Go Back</div>
       </div>
-    </header>
-    <main class="main" id="home">
+    </div>
+    <div class="main" id="home">
       <div class="profile">
         <div>Hi, my name is</div>
         <div><span class="profile__name white">Nicki Marty Pecision</span></div>
@@ -123,13 +138,29 @@
           </div>
 
           <div class="profile__icon">
-            <a href="" id="github" class="github-dark"
+            <a
+              href=""
+              id="github"
+              class="github-dark"
+              aria-label="Github"
+              rel="noopener noreferrer"
               ><iconify-icon icon="mdi:github"
             /></a>
-            <a href="" id="linkedin" class="linkedin-dark">
+            <a
+              href=""
+              id="linkedin"
+              class="linkedin-dark"
+              aria-label="Linkedin"
+              rel="noopener noreferrer"
+            >
               <iconify-icon icon="mdi:linkedin"
             /></a>
-            <a href="" id="gmail" class="gmail-dark"
+            <a
+              href=""
+              id="gmail"
+              class="gmail-dark"
+              aria-label="Gmail"
+              rel="noopener noreferrer"
               ><iconify-icon icon="mdi:gmail"
             /></a>
           </div>
@@ -183,8 +214,7 @@
 
         <!--  -->
       </div>
-    </main>
-    <footer></footer>
+    </div>
     <script type="module" src="app.js"></script>
   </body>
 </html>
