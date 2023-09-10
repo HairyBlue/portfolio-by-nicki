@@ -33,6 +33,7 @@
 }
 
 .profile {
+  height: 100vh;
   font-size: $fs-lg;
   &__name {
     font-size: $fs-xl2;
@@ -69,76 +70,135 @@
 
   &__icon {
     font-size: $fs-xl;
-    @include mobile {
-      font-size: 128px;
-      margin-top: 32px;
-    }
     @include mobile-large {
-      font-size: 128px;
-      margin-top: 32px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      font-size: 48px;
+      width: 100%;
+      height: 48px;
+      z-index: 999;
+    }
+    @include mobile {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      font-size: 48px;
+      width: 100%;
+      height: 48px;
+      z-index: 999;
+    }
+  }
+
+  &__blur {
+    display: none;
+
+    @include mobile-large {
+      display: block;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 48px;
+      filter: blur(1px);
+      background-color: #12243d8c;
+    }
+    @include mobile {
+      display: block;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 48px;
+      filter: blur(1px);
+      background-color: #12243d8c;
     }
   }
 }
 
 .project {
-  margin-top: 120px;
+  @include large-screen {
+    font-size: $fs-md;
+  }
+  @include extra-large-screen {
+    font-size: $fs-md;
+  }
+
   &__text {
     text-align: center;
     &--big {
       font-size: $fs-xl;
     }
-    &--md {
-      font-size: $fs-md;
-    }
+    // &--md {
+    //   font-size: $fs-md;
+    // }
   }
 
   &__category {
     @extend %flex-center;
-    width: 80%;
-    margin: 0 auto;
+    flex-wrap: wrap;
     margin-top: 64px;
+
+    @include mobile-large {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include mobile {
+      width: 80%;
+      margin: 0 auto;
+    }
     div {
       font-size: $fs-base;
       color: $dark;
-      background-color: $slate;
       padding: 8px;
-      margin-left: 8px;
+      margin: 8px 8px 0 0;
       border-radius: 4px;
+
+      @include mobile-large {
+        padding: 4px;
+      }
+      @include mobile {
+        padding: 4px;
+      }
     }
   }
   &__list {
     display: grid;
+    height: 70vh;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     margin-top: 12px;
-
-    @include mobile {
-      grid-template-columns: 1fr;
-    }
+    overflow-y: scroll;
     @include mobile-large {
       grid-template-columns: 1fr;
+      height: 80vh;
+      padding-bottom: 64px;
     }
+    @include mobile {
+      grid-template-columns: 1fr;
+      height: 80vh;
+      padding-bottom: 64px;
+    }
+
     @include tablet {
       grid-template-columns: 1fr 1fr;
     }
   }
-  // &__container{
-  //   // border: 1px solid red;
-  // }
+
   &__wrap {
     background-color: $bg-grid;
     height: 320px;
     border-radius: 4px;
     display: flex;
     align-items: end;
-    @include mobile {
-      width: 90%;
-      height: 250px;
+    @include mobile-large {
+      width: 80%;
+      height: 300px;
       margin: 0 auto;
     }
-    @include mobile-large {
-      width: 70%;
-      height: 300px;
+    @include mobile {
+      width: 80%;
+      height: 250px;
       margin: 0 auto;
     }
     @include tablet {
@@ -164,11 +224,22 @@
   }
 
   &__label {
-    &--big {
-      font-size: $fs-md;
-    }
+    // font-size: $fs-md;
+    // &--big {
+    //   font-size: $fs-md;
+    // }
     &--box {
       @extend %flex;
+      @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @include mobile-large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       div {
         color: $dark;
         background-color: $slate;

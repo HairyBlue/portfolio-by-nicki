@@ -20,9 +20,9 @@
         <div class="navbar__menu">
           <nav>
             <ul>
-              <li><a href="#home" class="slate">Home</a></li>
-              <li><a href="#project" class="slate">Project</a></li>
-              <li><a href="#about" class="slate">About</a></li>
+              <li class="slate home-button">Home</li>
+              <li class="slate project-button">Project</li>
+              <li class="slate about-button">About</li>
             </ul>
           </nav>
         </div>
@@ -57,22 +57,19 @@
           </a>
         </div>
 
-        <div class="navbar__hamburger">
-          <img
-            src="assets/svg/hamburger-menu.svg"
-            alt=""
-            class="navbar__hamburger--img"
-          />
+        <div class="navbar__hamburger--menu">
+          <img src="assets/svg/hamburger-menu.svg" alt="" />
         </div>
+        <div class="blur"></div>
       </div>
 
       <div class="navbar__mobile">
         <div class="navbar__mobile--menu">
           <nav>
             <ul>
-              <li><a href="#home" class="slate">Home</a></li>
-              <li><a href="#project" class="slate">Project</a></li>
-              <li><a href="#about" class="slate">About</a></li>
+              <li class="slate home-button">Home</li>
+              <li class="slate project-button">Project</li>
+              <li class="slate about-button">About</li>
             </ul>
           </nav>
         </div>
@@ -106,30 +103,38 @@
             />
           </a>
         </div>
+        <div class="navbar__mobile--back white">
+          <!-- <img src="assets/svg/close.svg" alt="" /> -->
+          Go Back
+        </div>
       </div>
     </header>
-    <main class="main">
+    <main class="main" id="home">
       <div class="profile">
         <div>Hi, my name is</div>
         <div><span class="profile__name white">Nicki Marty Pecision</span></div>
         <div>An aspiring web developer crafting effective web solutions.</div>
-      </div>
-      <div class="profile__links">
-        <div class="profile__button dark">Check my projects</div>
-        <div class="profile__icon">
-          <a href="" id="github" class="github-dark"
-            ><iconify-icon icon="mdi:github"
-          /></a>
-          <a href="" id="linkedin" class="linkedin-dark">
-            <iconify-icon icon="mdi:linkedin"
-          /></a>
-          <a href="" id="gmail" class="gmail-dark"
-            ><iconify-icon icon="mdi:gmail"
-          /></a>
+        <div class="profile__links">
+          <div class="profile__button project-button dark">
+            Check my projects
+          </div>
+
+          <div class="profile__icon">
+            <a href="" id="github" class="github-dark"
+              ><iconify-icon icon="mdi:github"
+            /></a>
+            <a href="" id="linkedin" class="linkedin-dark">
+              <iconify-icon icon="mdi:linkedin"
+            /></a>
+            <a href="" id="gmail" class="gmail-dark"
+              ><iconify-icon icon="mdi:gmail"
+            /></a>
+          </div>
+          <div class="profile__blur"></div>
         </div>
       </div>
 
-      <div class="project">
+      <div class="project" id="projects">
         <div class="project__text">
           <div class="project__text--big white">Project</div>
           <div class="project__text--md">

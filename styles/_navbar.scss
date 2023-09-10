@@ -14,8 +14,28 @@
   align-items: end;
 }
 
-.navbar {
+header {
   position: relative;
+}
+.blur {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: $dark;
+  z-index: -999;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  padding: 8px;
+  margin-top: 4px;
   @extend %flex-between;
 
   &__logo {
@@ -65,7 +85,7 @@
     }
   }
 
-  &__hamburger {
+  &__hamburger--menu {
     @include tablet {
       display: none;
     }
@@ -78,9 +98,10 @@
     @include extra-large-screen {
       display: none;
     }
-    &--img {
+    img {
       width: 32px;
       height: 32px;
+      z-index: 999;
     }
   }
 }
@@ -88,9 +109,35 @@
 .navbar__mobile {
   position: absolute;
   width: 100%;
-  min-height: 100vh;
-  z-index: 999;
+  // height: 100vh;
   display: none;
+
+  &--back {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 64px;
+    font-weight: 600;
+    margin-right: 12px;
+    @include tablet {
+      display: none;
+    }
+    @include small-screen {
+      display: none;
+    }
+    @include large-screen {
+      display: none;
+    }
+    @include extra-large-screen {
+      display: none;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+
+      z-index: 999;
+    }
+  }
 
   &--menu > nav > ul {
     @extend %flex-column-end;
@@ -99,7 +146,7 @@
       font-weight: 600;
       list-style: none;
       margin-top: 24px;
-      margin-right: 24px;
+      margin-right: 12px;
     }
     a {
       text-decoration: none;
@@ -108,7 +155,7 @@
 
   &--misc {
     margin-top: 24px;
-    margin-right: 24px;
+    margin-right: 12px;
     text-align: end;
   }
   &--theme {

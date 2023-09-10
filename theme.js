@@ -4,6 +4,7 @@ const upload = document.querySelectorAll(".upload");
 const primary = document.querySelectorAll(".white");
 const secondary = document.querySelectorAll(".slate");
 const backgroundWhite = document.querySelector(".bg-white");
+const headerBlur = document.querySelector(".blur")
 const localStorageTheme = localStorage.getItem("_theme");
 
 const github = document.querySelector("#github");
@@ -56,6 +57,7 @@ function light() {
     e.classList.remove("white");
     e.classList.add("dark");
   });
+  headerBlur.style.backgroundColor = "#fff"
   iconLight();
 }
 
@@ -76,6 +78,7 @@ function dark() {
     e.classList.remove("dark");
     e.classList.add("white");
   });
+  headerBlur.style.backgroundColor = ""
   iconDark();
 }
 

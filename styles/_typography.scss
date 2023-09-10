@@ -15,19 +15,22 @@
   --fs-base: 16px;
   --fs-sm: 8px;
 }
+@include mobile-large {
+  :root {
+    // --fs-xl2: 64px;
+    --fs-xl: 32px;
+    --fs-lg: 24px
+    --fs-md: 8px;
+  }
+}
+
 
 @include mobile {
   :root {
     // --fs-xl2: 48px;
     --fs-xl: 32px;
     --fs-lg: 24px
-  }
-}
-@include mobile-large {
-  :root {
-    // --fs-xl2: 64px;
-    --fs-xl: 32px;
-    --fs-lg: 24px
+    --fs-md: 8px;
   }
 }
 
