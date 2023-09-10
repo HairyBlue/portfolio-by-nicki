@@ -140,7 +140,7 @@ a {
   }
 }
 
-.profile__links, .navbar {
+.profile__links, .navbar__center {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -181,6 +181,20 @@ header {
   height: 32px;
   padding: 8px;
   margin-top: 4px;
+}
+.navbar__center {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 456px) {
+  .navbar__center {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar__center {
+    width: 100%;
+  }
 }
 .navbar__logo img {
   width: 32px;
@@ -331,7 +345,7 @@ header {
   }
 }
 
-.profile__links, .navbar {
+.profile__links, .navbar__center {
   display: flex;
   justify-content: space-between;
   align-items: center;
