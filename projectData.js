@@ -127,7 +127,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function projectBtnFunc() {
   document.querySelectorAll(".project__category--btn").forEach((els) => {
-    console.log(els.classList);
     els.addEventListener("click", () => {
       filterProjects(els.id);
     });
