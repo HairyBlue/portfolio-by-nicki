@@ -179,8 +179,6 @@ header {
   left: 0;
   width: 100%;
   height: 32px;
-  padding: 8px;
-  margin-top: 4px;
 }
 .navbar__center {
   width: 80%;
@@ -195,6 +193,9 @@ header {
   .navbar__center {
     width: 100%;
   }
+}
+.navbar__logo {
+  margin-top: 4px;
 }
 .navbar__logo img {
   width: 32px;
@@ -218,6 +219,9 @@ header {
 }
 .navbar__menu > nav > ul a {
   text-decoration: none;
+}
+.navbar__misc {
+  margin-top: 4px;
 }
 .navbar__misc--theme {
   width: 32px;
