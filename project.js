@@ -1,21 +1,21 @@
 const projects = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1682687981907-170c006e3744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-    name: "RepoChum",
-    technologies: [
-      ["#html", "#fb923c", "icomoon-free:html-five", "#ea580c"],
-      ["#css", "#7dd3fc", "simple-icons:css3", "#0284c7"],
-      ["#javascript", "#fde047", "simple-icons:javascript", "#ca8a04"],
-    ],
-    description:
-      "RepoChum is made to help user views event on other user github repo.",
-    category: "Community",
-    url: {
-      visit: "dsd",
-      github: "dsd",
-    },
-  },
+  // {
+  //   image:
+  //     "https://images.unsplash.com/photo-1682687981907-170c006e3744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+  //   name: "RepoChum",
+  //   technologies: [
+  //     ["#html", "#fb923c", "icomoon-free:html-five", "#ea580c"],
+  //     ["#css", "#7dd3fc", "simple-icons:css3", "#0284c7"],
+  //     ["#javascript", "#fde047", "simple-icons:javascript", "#ca8a04"],
+  //   ],
+  //   description:
+  //     "RepoChum is made to help user views event on other user github repo.",
+  //   category: "Community",
+  //   url: {
+  //     visit: "dsd",
+  //     github: "dsd",
+  //   },
+  // },
 ];
 
 let temp = [];
