@@ -6,7 +6,7 @@
   --fs-sm: 8px;
 */
 :root {
-  --fs-xl2: clamp(48px, 8vw, 192px);
+  --fs-xl2: clamp(32px, 6vw, 124px);
   --fs-xl: 64px;
   --fs-lg: 32px;
   --fs-md: 24px;
@@ -79,7 +79,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: var(--fs-base);
   width: 80%;
   min-height: 100vh;
@@ -104,6 +104,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #94a3b8;
 }
 
 .tooltip {
@@ -230,6 +231,10 @@ a {
   width: 32px;
   height: 32px;
 }
+.navbar__misc--print {
+  width: 32px;
+  height: 32px;
+}
 @media screen and (max-width: 456px) {
   .navbar__misc {
     display: none;
@@ -327,6 +332,10 @@ a {
   width: 64px;
   height: 64px;
 }
+.navbar__mobile--print {
+  width: 64px;
+  height: 64px;
+}
 @media screen and (min-width: 768px) and (max-width: 919px) {
   .navbar__mobile {
     display: none !important;
@@ -360,13 +369,13 @@ a {
   align-items: center;
 }
 
-.project__category {
+.project-links div, .about__tech--divs, .project__label--box div, .project__category {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.project__label--box {
+.project-links, .about__tech--list, .project__label--box {
   display: flex;
 }
 
@@ -411,7 +420,7 @@ a {
   }
 }
 .profile__button {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
   background-color: #94a3b8;
   padding: 12px;
   border-radius: 10px;
@@ -513,20 +522,20 @@ a {
     margin: 0 auto;
   }
 }
-.project__category div {
+.project__category--btn {
   font-size: var(--fs-base);
-  color: #030712;
+  border-radius: 8px;
+  border: 1.5px solid rgba(131, 131, 131, 0.4941176471);
   padding: 8px;
   margin: 8px 8px 0 0;
-  border-radius: 4px;
 }
 @media screen and (max-width: 767px) {
-  .project__category div {
+  .project__category--btn {
     padding: 4px;
   }
 }
 @media screen and (max-width: 456px) {
-  .project__category div {
+  .project__category--btn {
     padding: 4px;
   }
 }
@@ -617,9 +626,124 @@ a {
   }
 }
 .project__label--box div {
+  font-size: var(--fs-base);
   color: #030712;
-  background-color: #94a3b8;
-  padding: 4px;
+  padding: 2px;
   margin-right: 4px;
-  border-radius: 4px;
+  border-radius: 2px;
+}
+
+.about {
+  height: 100vh;
+}
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  .about {
+    font-size: var(--fs-md);
+  }
+}
+@media screen and (min-width: 1401px) {
+  .about {
+    font-size: var(--fs-md);
+  }
+}
+.about__text--big {
+  text-align: center;
+  font-size: var(--fs-xl);
+}
+.about__text--name {
+  font-size: var(--fs-xl2);
+  margin-top: 32px;
+}
+.about__text--md {
+  width: 70%;
+  font-size: var(--fs-md);
+}
+@media screen and (max-width: 767px) {
+  .about__text--md {
+    width: inherit;
+    font-size: var(--fs-base);
+  }
+}
+@media screen and (max-width: 456px) {
+  .about__text--md {
+    width: inherit;
+    font-size: var(--fs-base);
+  }
+}
+.about__tech {
+  margin-top: 32px;
+}
+.about__tech--text {
+  font-size: var(--fs-lg);
+}
+.about__tech--list {
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 24px;
+}
+@media screen and (max-width: 767px) {
+  .about__tech--list {
+    width: 90%;
+    margin: 24px auto;
+  }
+}
+@media screen and (max-width: 456px) {
+  .about__tech--list {
+    width: 90%;
+    margin: 24px auto;
+  }
+}
+.about__tech--divs {
+  padding: 2px;
+  background-color: rgba(88, 88, 88, 0.3843137255);
+  border-radius: 8px;
+  border: 1.5px solid rgba(131, 131, 131, 0.4941176471);
+}
+.about__tech--divs iconify-icon {
+  margin-right: 4px;
+}
+
+.project-links {
+  gap: 4px;
+}
+.project-links div {
+  font-size: var(--fs-base);
+  padding: 4px;
+  border: 1.5px solid rgba(131, 131, 131, 0.4941176471);
+  border-radius: 8px;
+}
+.project-links div:hover {
+  background-color: #4ade80;
+  color: #030712;
+}
+@media screen and (max-width: 767px) {
+  .project-links {
+    display: block;
+    width: 90%;
+    margin: 24px auto;
+  }
+}
+@media screen and (max-width: 456px) {
+  .project-links {
+    display: block;
+    width: 90%;
+    margin: 24px auto;
+  }
+}
+
+.footer {
+  text-align: center;
+}
+.footer__copy {
+  font-size: var(--fs-md);
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 456px) {
+  .footer {
+    margin-bottom: 64px;
+  }
 }/*# sourceMappingURL=styles.css.map */

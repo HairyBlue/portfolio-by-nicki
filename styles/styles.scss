@@ -23,7 +23,7 @@
 //   scroll-behavior: smooth;
 // }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: $fs-base;
   width: 80%;
   min-height: 100vh;
@@ -45,6 +45,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $slate;
 }
 
 .tooltip {
@@ -79,3 +80,4 @@ a {
 
 @import "navbar";
 @import "main";
+@import "footer"

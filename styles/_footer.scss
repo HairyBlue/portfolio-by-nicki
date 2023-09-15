@@ -1,0 +1,12 @@
+.footer {
+  text-align: center;
+  &__copy {
+    font-size: $fs-md;
+  }
+  @include mobile-large {
+    margin-bottom: 64px;
+  }
+  @include mobile {
+    margin-bottom: 64px;
+  }
+}

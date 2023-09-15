@@ -88,7 +88,10 @@
       width: 32px;
       height: 32px;
     }
-
+    &--print {
+      width: 32px;
+      height: 32px;
+    }
     @include mobile {
       display: none;
     }
@@ -175,6 +178,10 @@
     height: 64px;
   }
   &--upload {
+    width: 64px;
+    height: 64px;
+  }
+  &--print {
     width: 64px;
     height: 64px;
   }

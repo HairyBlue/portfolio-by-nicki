@@ -39,9 +39,11 @@
     <!-- Style -->
     <link rel="stylesheet" href="styles/styles.css" />
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
     />
     <!-- Icon-Script -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -73,8 +75,24 @@
               alt="theme"
             />
             <a
-              href="#"
+              href="./assets/files/nickimartypecision.pdf"
               aria-label="Resume"
+              class="tooltip"
+              aria-expanded="false"
+              role="button"
+              tabindex="0"
+              rel="noopener noreferrer"
+              download
+            >
+              <img
+                class="navbar__misc--upload upload"
+                src="assets/svg/upload-dark.svg"
+                alt="CV"
+              />
+            </a>
+            <a
+              href="#"
+              aria-label="Print"
               class="tooltip"
               aria-expanded="false"
               role="button"
@@ -82,9 +100,10 @@
               rel="noopener noreferrer"
             >
               <img
-                class="navbar__misc--upload upload"
-                src="assets/svg/upload-dark.svg"
-                alt="CV"
+                class="navbar__misc--print print"
+                src="assets/svg/print.svg"
+                aria-label="Resume"
+                alt="print-icon"
               />
             </a>
           </div>
@@ -113,8 +132,25 @@
             alt="mobile-theme"
           />
           <a
-            href="#"
+            href="./assets/files/nickimartypecision.pdf"
             aria-label="Resume"
+            class="tooltip"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+            rel="noopener noreferrer"
+            download
+          >
+            <img
+              class="navbar__mobile--upload upload"
+              src="assets/svg/upload-dark.svg"
+              aria-label="Resume"
+              alt="upload-icon"
+            />
+          </a>
+          <a
+            href="#"
+            aria-label="Print"
             class="tooltip"
             aria-expanded="false"
             role="button"
@@ -122,16 +158,17 @@
             rel="noopener noreferrer"
           >
             <img
-              class="navbar__mobile--upload upload"
-              src="assets/svg/upload-dark.svg"
+              class="navbar__mobile--print print"
+              src="assets/svg/print.svg"
               aria-label="Resume"
-              alt="close-icon"
+              alt="print-icon"
             />
           </a>
         </div>
         <div class="navbar__mobile--back white">Go Back</div>
       </div>
     </div>
+    <!-- main -->
     <div class="main" id="home">
       <div class="profile">
         <div>Hi, my name is</div>
@@ -144,7 +181,8 @@
 
           <div class="profile__icon">
             <a
-              href=""
+              href="https://github.com/HairyBlue"
+              target="_blank"
               id="github"
               class="github-dark"
               aria-label="Github"
@@ -152,7 +190,8 @@
               ><iconify-icon icon="mdi:github"
             /></a>
             <a
-              href=""
+              href="https://linkedin.com/in/nickimartypecision"
+              target="_blank"
               id="linkedin"
               class="linkedin-dark"
               aria-label="Linkedin"
@@ -161,7 +200,8 @@
               <iconify-icon icon="mdi:linkedin"
             /></a>
             <a
-              href=""
+              href="mailto:nickimartypecision@gmail.com"
+              target="_blank"
               id="gmail"
               class="gmail-dark"
               aria-label="Gmail"
@@ -173,6 +213,7 @@
         </div>
       </div>
 
+      <!-- projects -->
       <div class="project" id="projects">
         <div class="project__text">
           <div class="project__text--big white">Project</div>
@@ -181,18 +222,47 @@
             <div>If you have any question feel free to contact me</div>
           </div>
         </div>
+        <div class="project__category"></div>
+        <div class="project__list"></div>
+      </div>
 
-        <!-- product__category -->
-        <div class="project__category">
-          <!-- <div class="project__category--btn" id="All">All (5)</div>
+      <!-- about -->
+      <div class="about" id="about">
+        <div class="about__text">
+          <div class="about__text--big white">About</div>
+          <div class="about__text--name white">Im Nicki.</div>
+          <div class="about__text--md">
+            I’m an aspiring web developer working with different areas of web
+            technology, including front-end development, back-end development,
+            and some basic UI/UX design to embark on my imaginary ideas.
+          </div>
+          <div class="about__tech">
+            <div class="about__tech--text white">The technology I used</div>
+            <div class="about__tech--list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="footer__copy">&copy</span> 2023. Made by Nicki Marty Pecision
+    </div>
+
+    <div>
+      <iframe
+        id="pdf-object"
+        src="assets/files/nickimartypecision.pdf"
+        style="display: none"
+      ></iframe>
+    </div>
+    <script type="module" src="app.js"></script>
+    <script src="print.js"></script>
+  </body>
+</html>
+
+<!-- <div class="project__category--btn" id="All">All (5)</div>
           <div class="project__category--btn" id="Community">Community (2)</div>
           <div class="project__category--btn" id="Business">Business (2)</div> -->
-        </div>
-        <!--  -->
-
-        <!-- project__list -->
-        <div class="project__list">
-          <!-- <div class="project__container">
+<!-- <div class="project__container">
             <div class="project__wrap">
               <div class="project__wrap--img">
                 <img
@@ -212,14 +282,4 @@
                 repo.
               </div>
             </div>
-          </div>
-        --></div>
-
-        <!--  -->
-
-        <!--  -->
-      </div>
-    </div>
-    <script type="module" src="app.js"></script>
-  </body>
-</html>
+          </div> -->
