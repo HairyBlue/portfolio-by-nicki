@@ -1,26 +1,61 @@
 const projects = [
-  // {
-  //   image:
-  //     "https://images.unsplash.com/photo-1682687981907-170c006e3744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-  //   name: "RepoChum",
-  //   technologies: [
-  //     ["#html", "#fb923c", "icomoon-free:html-five", "#ea580c"],
-  //     ["#css", "#7dd3fc", "simple-icons:css3", "#0284c7"],
-  //     ["#javascript", "#fde047", "simple-icons:javascript", "#ca8a04"],
-  //   ],
-  //   description:
-  //     "RepoChum is made to help user views event on other user github repo.",
-  //   category: "Community",
-  //   url: {
-  //     visit: "dsd",
-  //     github: "dsd",
-  //   },
-  // },
+  {
+    image:
+      "https://raw.githubusercontent.com/edmundnillas3rd/CCIS-Scheduler/master/assets/images/demo-2.jpg",
+    name: "CCIS-Scheduler",
+    technologies: [
+      ["#react", "#7dd3fc", "mdi:react", "#0284c7"],
+      ["#redux", "#c4b5fd", "simple-icons:redux", "#7c3aed"],
+    ],
+    description:
+      "CCIS-Scheduler was made for the College of Computing and Information Sciences for organizing and setting scheduled meetups between the faculty and the students, whether it be for academic or personal reasons.",
+    category: "School",
+    url: {
+      visit: "https://ccis-scheduler.onrender.com/login",
+      github: "https://github.com/edmundnillas3rd/CCIS-Scheduler",
+    },
+  },
+  {
+    image:
+      "https://raw.githubusercontent.com/HairyBlue/public-images/main/rushfire/rushfire.png",
+    name: "RushFire",
+    technologies: [
+      ["#vue", "#86efac", "mdi:vuejs", "#16a34a"],
+      ["#tailwind", "#bae6fd", "mdi:tailwind", "#0284c7"],
+      ["#pinia", "#fef08a", "logos:pinia", ""],
+      ["#chartjs", "#fca5a5", "file-icons:chartjs", ""],
+      ["#mapbox", "#d1d5db", "mdi:mapbox", "1f2937"],
+    ],
+    description:
+      "RushFire serves as a real-time fire incident monitoring platform in my  local area, ensuring quick and efficient response to emergencies. By tracking incidents and alerting relevant authorities, it contributes to the safety and well-being of our community.",
+    category: "Community",
+    url: {
+      visit: "",
+      github: "https://github.com/HairyBlue/RushedFire_Web",
+    },
+  },
+  {
+    image:
+      "https://raw.githubusercontent.com/HairyBlue/public-images/main/repochum/repochum.png",
+    name: "RepoChum",
+    technologies: [
+      ["#html", "#fed7aa", "icomoon-free:html-five", "#ea580c"],
+      ["#css", "#bae6fd", "simple-icons:css3", "#0284c7"],
+      ["#javascript", "#fef08a", "simple-icons:javascript", "#ca8a04"],
+    ],
+    description:
+      "RepoChum, a simple website with GitHub API integration, allows users to effortlessly keep tabs on the latest activities within their repositories or those of other users, facilitating seamless tracking of events.",
+    category: "Others",
+    url: {
+      visit: "https://repochum.onrender.com/",
+      github: "https://github.com/HairyBlue/RepoChum_Static",
+    },
+  },
 ];
 
 let temp = [];
 let btnData = [];
-const projectsCategory = ["Community", "Business"];
+const projectsCategory = ["School", "Community", "Others"];
 
 const retrieveKey = () => {
   for (let i = 0; i < projectsCategory.length; i++) {
@@ -110,6 +145,7 @@ function gridList(data) {
       tech.style.background = techData[k][1];
       icon.setAttribute("icon", `${techData[k][2]}`);
       icon.style.color = techData[k][3];
+      icon.style.marginLeft = "4px";
       tech.appendChild(icon);
       projectLabelBox.appendChild(tech);
     }
