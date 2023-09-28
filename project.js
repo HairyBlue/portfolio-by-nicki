@@ -25,13 +25,17 @@ const projects = [
       ["#pinia", "#fef08a", "logos:pinia", ""],
       ["#chartjs", "#fca5a5", "file-icons:chartjs", ""],
       ["#mapbox", "#d1d5db", "mdi:mapbox", "1f2937"],
+      ["#nodejs", "#bbf7d0", "devicon:nodejs", ""],
+      ["#express", "#e0f2fe", "simple-icons:express", ""],
+      ["#mysql", "#e0f2fe", "devicon:mysql", ""],
+      ["#planetscale", "#e2e8f0", "logos:planetscale", ""]
     ],
     description:
       "RushFire serves as a real-time fire incident monitoring platform in my  local area, ensuring quick and efficient response to emergencies. By tracking incidents and alerting relevant authorities, it contributes to the safety and well-being of our community.",
     category: "Community",
     url: {
       visit: "",
-      github: "https://github.com/HairyBlue/RushedFire_Web",
+      github: "https://github.com/HairyBlue/Rushfire",
     },
   },
   {
